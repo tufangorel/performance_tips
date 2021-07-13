@@ -4,21 +4,22 @@
 
 [**1- Java SE**](#1-Java-SE)
 
-[**2- Collections**](#_9wvr6u7g7q8s)
+[**2- Collections**](#2-Collections)
 
-[**3- Database Connection**](#_1t78huxzwyu9)
+[**3- Database Connection**](#3-Database-Connection)
 
-[**4- Threading**](#_4jtrlhj2180t)
+[**4- Threading**](#4-Threading)
 
-[**5- GC Efficiency**](#_6v9mw5em993h)
+[**5- GC Efficiency**](#5-GC-Efficiency)
 
-[**6- Memory Space Efficiency**](#_jsvbx32dbgem)
+[**6- Memory Space Efficiency**](#6-Memory-Space-Efficiency)
 
-[**7- JVM Efficiency**](#_fk1xyaoxc79l)
+[**7- JVM Efficiency**](#7-JVM-Efficiency)
 
-[**8- Log Generation**](#_mqu6sdcm3y3k)
+[**8- Log Generation**](#8-Log-Generation)
 
-[**9- Sorting**](#_3bnc2rwan1pa)
+[**9- Sorting**](#9-Sorting)
+
 
 ### 1-Java SE
 
@@ -38,7 +39,7 @@
 
 **-** Prefer lambda expressions over anonymous classes.
 
-# 2- Collections
+### 2- Collections
 
 **-** Prefer ArrayList for accessing the nth element by index value to get benefit of constant access time cost.
 
@@ -54,7 +55,7 @@
 
 **-** Use unsynchronized Collection types for better performance achievements in single threaded environments.
 
-# 3- Database Connection
+### 3- Database Connection
 
 **-** Use database connection pool to decrease the cost of creating new db connection objects for each connection.
 
@@ -68,7 +69,7 @@
 
 **-** Lazy load unnecessary data as much as possible.
 
-# 4- Threading
+### 4- Threading
 
 **-** Use thread pool to keep a number of worker threads for task processing.
 
@@ -76,7 +77,7 @@
 
 **-** Know that thread-safety comes with a performance cost.
 
-# 5- GC Efficiency
+### 5- GC Efficiency
 
 **-** Create smaller objects.
 
@@ -86,11 +87,11 @@
 
 **-** Select appropriate GC algorithm.
 
-# 6- Memory Space Efficiency
+### 6- Memory Space Efficiency
 
 **-** Null instance variables consume memory, if null instance variables are not used then remove them from the enclosing class definition.
 
-# 7- JVM Efficiency
+### 7- JVM Efficiency
 
 **-** Set min and max heap sizes for your application with JVM flags Xms and Xmx.
 
@@ -98,7 +99,7 @@
 
 **-** Use command line tools to analyze heap and thread dumps.
 
-# 8- Log Generation
+### 8- Log Generation
 
 **-** Use a centralized logging mechanism.
 
@@ -106,6 +107,6 @@
 
 **-** Do not use VERBOSE, DEBUG, INFO levels for production environment.
 
-# 9- Sorting
+### 9- Sorting
 
 **-** java.util.Arrays.sort method is optimized for item count therefore use Arrays.sort for better performance achievement. Know that java.util.Arrays.sort is optimized for a list of items containing less than 47 elements to use insertion sort instead of quicksort.
