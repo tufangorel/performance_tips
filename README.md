@@ -1,10 +1,11 @@
 ## Performance Tips
+=============================
 
-**Content**
+## Contents
 
-[**1- Java SE**](#1-Java-SE)
+- [Java-SE](#java-se)
 
-[**2- Collections**](#2-Collections)
+- [Collections](#collections)
 
 [**3- Database Connection**](#3-Database-Connection)
 
@@ -21,7 +22,7 @@
 [**9- Sorting**](#9-Sorting)
 
 
-### 1-Java SE
+## Java SE
 
 **-** Prefer java.util.concurrent.ThreadLocalRandom for muti-threaded environments instead of java.util.Random .
 
@@ -39,7 +40,7 @@
 
 **-** Prefer lambda expressions over anonymous classes.
 
-### 2- Collections
+## Collections
 
 **-** Prefer ArrayList for accessing the nth element by index value to get benefit of constant access time cost.
 
