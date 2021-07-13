@@ -2,7 +2,7 @@
 
 **Content**
 
-[**1- Java SE**](#_mabonjkhyia5)
+[**1- Java SE**](#1-Java-SE)
 
 [**2- Collections**](#_9wvr6u7g7q8s)
 
@@ -20,7 +20,7 @@
 
 [**9- Sorting**](#_3bnc2rwan1pa)
 
-# 1- Java SE
+### 1-Java SE
 
 **-** Prefer java.util.concurrent.ThreadLocalRandom for muti-threaded environments instead of java.util.Random .
 
