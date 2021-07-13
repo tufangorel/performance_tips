@@ -1,5 +1,6 @@
 Performance Tips
 =============================
+Purpose : The purpose of this document is to provide a base check list for the code review activities.
 
 ## Contents
 
