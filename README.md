@@ -7,19 +7,19 @@ Performance Tips
 
 - [Collections](#collections)
 
-[**3- Database Connection**](#3-Database-Connection)
+- [Database Connection](#database-connection)
 
-[**4- Threading**](#4-Threading)
+- [Threading](#threading)
 
-[**5- GC Efficiency**](#5-GC-Efficiency)
+- [GC Efficiency](#gc-efficiency)
 
-[**6- Memory Space Efficiency**](#6-Memory-Space-Efficiency)
+- [Memory Space Efficiency](#memory-space-efficiency)
 
-[**7- JVM Efficiency**](#7-JVM-Efficiency)
+- [JVM Efficiency](#jvm-efficiency)
 
-[**8- Log Generation**](#8-Log-Generation)
+- [Log Generation](#log-generation)
 
-[**9- Sorting**](#9-Sorting)
+- [Sorting](#sorting)
 
 
 ## Java SE
@@ -56,7 +56,7 @@ Performance Tips
 
 **-** Use unsynchronized Collection types for better performance achievements in single threaded environments.
 
-### 3- Database Connection
+## Database Connection
 
 **-** Use database connection pool to decrease the cost of creating new db connection objects for each connection.
 
@@ -70,7 +70,7 @@ Performance Tips
 
 **-** Lazy load unnecessary data as much as possible.
 
-### 4- Threading
+## Threading
 
 **-** Use thread pool to keep a number of worker threads for task processing.
 
@@ -78,7 +78,7 @@ Performance Tips
 
 **-** Know that thread-safety comes with a performance cost.
 
-### 5- GC Efficiency
+## GC Efficiency
 
 **-** Create smaller objects.
 
@@ -88,11 +88,11 @@ Performance Tips
 
 **-** Select appropriate GC algorithm.
 
-### 6- Memory Space Efficiency
+## Memory Space Efficiency
 
 **-** Null instance variables consume memory, if null instance variables are not used then remove them from the enclosing class definition.
 
-### 7- JVM Efficiency
+## JVM Efficiency
 
 **-** Set min and max heap sizes for your application with JVM flags Xms and Xmx.
 
@@ -100,7 +100,7 @@ Performance Tips
 
 **-** Use command line tools to analyze heap and thread dumps.
 
-### 8- Log Generation
+## Log Generation
 
 **-** Use a centralized logging mechanism.
 
@@ -108,6 +108,6 @@ Performance Tips
 
 **-** Do not use VERBOSE, DEBUG, INFO levels for production environment.
 
-### 9- Sorting
+## Sorting
 
 **-** java.util.Arrays.sort method is optimized for item count therefore use Arrays.sort for better performance achievement. Know that java.util.Arrays.sort is optimized for a list of items containing less than 47 elements to use insertion sort instead of quicksort.
