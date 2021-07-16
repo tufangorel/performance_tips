@@ -45,9 +45,9 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Prefer primitive data types instead of Wrappers as class members. For instance, use "int" for "Integer" or "double" for "Double" as a class member.
 
-**-** If components of String concatenation is known at compile-time then prefer String concatenation "+" operator. However, if the String components cannot be resolved at compile-time then use StringBuffer to produce the result String.
+**-** If components of String concatenation is known at compile-time then prefer String concatenation "+" operator. However, if the String components can not be resolved at compile-time then use StringBuffer to produce the result String.
 
-**-** Avoid casting explictly in a try block and throwing new exceptions in catch block, instead prefer instanceOf operator for type checking.
+**-** Avoid casting explictly in a try block and throwing new exception in catch block, instead prefer instanceOf operator for type checking.
 
 
 ## Collections
