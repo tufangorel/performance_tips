@@ -41,6 +41,15 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Prefer lambda expressions over anonymous classes.
 
+**-** Use enumerated integers defined in a constant interface instead of constant String values for speed and memory benefits. Take performance advantage of comparing enumerated objects by identity comparison using "==" operator instead of equals() method.
+
+**-** Prefer primitive data types instead of Wrappers as class members. For instance, use "int" for "Integer" or "double" for "Double" as a class member.
+
+**-** If components of String concatenation is known at compile-time then prefer String concatenation "+" operator. However, if the String components cannot be resolved at compile-time then use StringBuffer to produce the result String.
+
+**-** Avoid casting explictly in a try block and throwing new exceptions in catch block, instead prefer instanceOf operator for type checking.
+
+
 ## Collections
 
 **-** Prefer ArrayList for accessing the nth element by index value to get benefit of constant access time cost.
