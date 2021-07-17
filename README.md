@@ -49,6 +49,14 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Avoid casting explictly in a try block and throwing new exception in catch block, instead prefer instanceOf operator for type checking.
 
+**-** When iterating over a collection do not use collection.size() as loop termination test in the for-while loop, instead assign the collection.size() to a variable outside the loop and use this variable as loop termination condition.
+
+**-** Prefer int data type as loop index variable instead of other numeric data types for better performance.
+
+**-** Prefer using interfaces and type overloading against runtime-reflection for performance gains.
+
+**-** If it is not required then do not define new @annotations and process them at run-time.
+
 
 ## Collections
 
