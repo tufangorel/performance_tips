@@ -128,7 +128,7 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Do not use VERBOSE, DEBUG, INFO levels for production environment.
 
-**-** Do not use System.out for logging to the console instead select a logging framework with a log level feature.
+**-** Do not use System.out for logging to the console instead select a logging framework with a customizable log level feature.
 
 ## Sorting
 
