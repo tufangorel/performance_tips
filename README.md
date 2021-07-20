@@ -74,7 +74,13 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **- Not :** Access time for ArrayList: O(1). Access time for LinkedList: O(n).
 
-**-** Use unsynchronized Collection types for better performance achievements in single threaded environments.
+**-** Use unsynchronized Collection types for better performance achievements in single-threaded environments.
+
+**-** Hashtable is synchronized however HashMap is an unsynchronized version so performs better in single-threaded environments.
+
+**-** Vector is synchronized however ArrayList is an unsynchronized version so performs better in single-threaded environments.
+
+
 
 ## Database Connection
 
