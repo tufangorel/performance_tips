@@ -141,19 +141,19 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** To run a full GC before generating the heap histogram, excute jmap with -histo:live parameter.
 
-> jmap -histo:live 17472
- num     #instances         #bytes  class name (module)
--------------------------------------------------------
-   1:         73680        8554400  [B (java.base@11.0.10)
-   2:         22482        1978416  java.lang.reflect.Method (java.base@11.0.10)
-   3:         69875        1677000  java.lang.String (java.base@11.0.10)
-
+> jmap -histo:live 17472 </br>
+ num     #instances         #bytes  class name (module) </br>
+------------------------------------------------------- </br>
+   1:         73680        8554400  [B (java.base@11.0.10) </br>
+   2:         22482        1978416  java.lang.reflect.Method (java.base@11.0.10) </br>
+   3:         69875        1677000  java.lang.String (java.base@11.0.10) </br>
+</br>
 
 **-** Generate heap dump file by using jmap and running Java process id.
 
-> jmap -dump:live,file=heap_dump.hprof 17472
-Heap dump file created
-
+> jmap -dump:live,file=heap_dump.hprof 17472 </br>
+Heap dump file created </br>
+</br>
 **-** Use eclipse MAT to analyze generated heap dump file.
 
 **-** Turn -XX:+HeapDumpOnOutOfMemoryError JVM flag on to produce automatic heap dump when a memory problem occurs.
