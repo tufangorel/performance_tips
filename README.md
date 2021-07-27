@@ -130,7 +130,7 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Generate heap histogram and analyze number of instances for each Java object by using jcmd.
 
-$ jcmd 17472 GC.class_histogram
+> jcmd 17472 GC.class_histogram
 17472:
  num     #instances         #bytes  class name (module)
 -------------------------------------------------------
@@ -141,7 +141,7 @@ $ jcmd 17472 GC.class_histogram
 
 **-** To run a full GC before generating the heap histogram, excute jmap with -histo:live parameter.
 
-$ jmap -histo:live 17472
+> jmap -histo:live 17472
  num     #instances         #bytes  class name (module)
 -------------------------------------------------------
    1:         73680        8554400  [B (java.base@11.0.10)
@@ -151,7 +151,7 @@ $ jmap -histo:live 17472
 
 **-** Generate heap dump file by using jmap and running Java process id.
 
-$ jmap -dump:live,file=heap_dump.hprof 17472
+> jmap -dump:live,file=heap_dump.hprof 17472
 Heap dump file created
 
 **-** Use eclipse MAT to analyze generated heap dump file.
