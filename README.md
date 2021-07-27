@@ -122,6 +122,8 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Set min and max heap sizes for your application with JVM flags Xms and Xmx.
 
+**-** Turn -XX:+HeapDumpOnOutOfMemoryError JVM flag on to produce automatic heap dump when a memory problem occurs.
+
 **-** Set -XX:+HeapDumpOnOutOfMemoryError and -XX:HeapDumpPath JVM options to generate a heap dump for extra heap consumption cases.
 
 **-** Use command line tools to analyze heap and thread dumps.
@@ -155,9 +157,6 @@ Purpose : The purpose of this document is to provide a base check list for the c
 Heap dump file created </br>
 
 **-** Use eclipse MAT to analyze generated heap dump file.
-
-**-** Turn -XX:+HeapDumpOnOutOfMemoryError JVM flag on to produce automatic heap dump when a memory problem occurs.
-
 
 
 ## Log Generation
