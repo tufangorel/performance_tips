@@ -153,9 +153,9 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 > jmap -dump:live,file=heap_dump.hprof 17472 </br>
 Heap dump file created </br>
-</br>
+
 **-** Use eclipse MAT to analyze generated heap dump file.
-</br>
+
 **-** Turn -XX:+HeapDumpOnOutOfMemoryError JVM flag on to produce automatic heap dump when a memory problem occurs.
 
 
