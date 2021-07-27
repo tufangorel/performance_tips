@@ -59,6 +59,8 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Do not serialize unnecessary fields and mark them with transient.
 
+**-** Prefer java.lang.ref.Cleaner class instead of Finalizer to free memory.
+
 
 ## Collections
 
