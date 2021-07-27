@@ -130,14 +130,14 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Generate heap histogram and analyze number of instances for each Java object by using jcmd.
 
-> jcmd 17472 GC.class_histogram
-17472:
- num     #instances         #bytes  class name (module)
--------------------------------------------------------
-   1:         73517        8531872  [B (java.base@11.0.10)
-   2:         22482        1978416  java.lang.reflect.Method (java.base@11.0.10)
-   3:         69712        1673088  java.lang.String (java.base@11.0.10)
-
+> jcmd 17472 GC.class_histogram </br>
+17472: </br>
+ num     #instances         #bytes  class name (module)  </br>
+-------------------------------------------------------  </br>
+   1:         73517        8531872  [B (java.base@11.0.10)  </br>
+   2:         22482        1978416  java.lang.reflect.Method (java.base@11.0.10)  </br>
+   3:         69712        1673088  java.lang.String (java.base@11.0.10)  </br>
+</br>
 
 **-** To run a full GC before generating the heap histogram, excute jmap with -histo:live parameter.
 
