@@ -82,8 +82,6 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Vector is synchronized however ArrayList is an unsynchronized version so performs better in single-threaded environments.
 
-
-
 ## Database Connection
 
 **-** Use database connection pool to decrease the cost of creating new db connection objects for each connection.
@@ -106,9 +104,9 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Prefer Atomic classes which utilize &quot;Compare and Swap&quot; instead of synchronized methods when appropriate.
 
-**-** Use jconsole utility to learn about the total number and status of currently running threads of a Java process.
+**-** Use jconsole utility to learn about the total number of currently running threads of a Java process.
 
-**-** To take a full thread dump of a running application use jstack with a process-id.
+**-** To take a full thread dump of a running Java process use jstack with a process-id.
 
 > jstack 11256 </br>
 2021-08-01 17:43:36 </br>
