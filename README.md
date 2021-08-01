@@ -113,7 +113,6 @@ Purpose : The purpose of this document is to provide a base check list for the c
 > jstack 11256 </br>
 2021-08-01 17:43:36 </br>
 Full thread dump OpenJDK 64-Bit Server VM (11.0.10+9-LTS mixed mode): </br>
-</br>
 Threads class SMR info: </br>
 _java_thread_list=0x00000180bae525e0, length=37, elements={ </br>
 0x00000180b5b15000, 0x00000180b5b16000, 0x00000180b5b6b800, 0x00000180b5b6d000 </br>
@@ -123,6 +122,7 @@ _java_thread_list=0x00000180bae525e0, length=37, elements={ </br>
         at java.lang.ref.Reference.waitForReferencePendingList(java.base@11.0.10/Native Method) </br>
         at java.lang.ref.Reference.processPendingReferences(java.base@11.0.10/Reference.java:241) </br>
         at java.lang.ref.Reference$ReferenceHandler.run(java.base@11.0.10/Reference.java:213) </br>
+</br>
 
 **-** Know that thread-safety comes with a performance cost.
 
