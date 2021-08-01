@@ -118,7 +118,6 @@ Threads class SMR info: </br>
 _java_thread_list=0x00000180bae525e0, length=37, elements={ </br>
 0x00000180b5b15000, 0x00000180b5b16000, 0x00000180b5b6b800, 0x00000180b5b6d000 </br>
 } </br>
-
 "Reference Handler" #2 daemon prio=10 os_prio=2 cpu=0.00ms elapsed=591.52s tid=0x00000180b5b15000 nid=0x4a4c waiting on condition  [0x000000655b8ff000] </br>
    java.lang.Thread.State: RUNNABLE </br>
         at java.lang.ref.Reference.waitForReferencePendingList(java.base@11.0.10/Native Method) </br>
