@@ -102,7 +102,28 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Use thread pool to keep a number of worker threads for task processing.
 
+**-** Set corePoolSize and maximumPoolSize values for ThreadPoolExecutor when initializing it with reasonable numbers to get maximum performance benefit.
+
 **-** Prefer Atomic classes which utilize &quot;Compare and Swap&quot; instead of synchronized methods when appropriate.
+
+**-** Use jconsole utility to learn about the total number and status of currently running threads of a Java process.
+
+**-** To take a full thread dump of a running application use jstack with a process-id.
+
+> jstack 11256 </br>
+2021-08-01 17:43:36 </br>
+Full thread dump OpenJDK 64-Bit Server VM (11.0.10+9-LTS mixed mode): </br>
+</br>
+Threads class SMR info: </br>
+_java_thread_list=0x00000180bae525e0, length=37, elements={ </br>
+0x00000180b5b15000, 0x00000180b5b16000, 0x00000180b5b6b800, 0x00000180b5b6d000 </br>
+} </br>
+
+"Reference Handler" #2 daemon prio=10 os_prio=2 cpu=0.00ms elapsed=591.52s tid=0x00000180b5b15000 nid=0x4a4c waiting on condition  [0x000000655b8ff000] </br>
+   java.lang.Thread.State: RUNNABLE </br>
+        at java.lang.ref.Reference.waitForReferencePendingList(java.base@11.0.10/Native Method) </br>
+        at java.lang.ref.Reference.processPendingReferences(java.base@11.0.10/Reference.java:241) </br>
+        at java.lang.ref.Reference$ReferenceHandler.run(java.base@11.0.10/Reference.java:213) </br>
 
 **-** Know that thread-safety comes with a performance cost.
 
