@@ -146,9 +146,9 @@ _java_thread_list=0x00000180bae525e0, length=37, elements={ </br>
 
 **-** Select appropriate GC algorithm.
 
-**-** Monitor GC activity by using jstat utility coming inside JDK.
-
 **-** Use "jps -lv" from command line to get list of running Java processes.
+
+**-** Monitor GC activity by using jstat utility coming inside JDK. jstat will print a new line to the standard output about current GC activity.
 
 > jstat -gc -t 11008 1s </br>
 Timestamp      S0C    S1C     S0U    S1U      EC       EU        OC         OU       MC        MU     CCSC   CCSU        YGC   YGCT    FGC    FGCT    CGC    CGCT     GCT </br>
