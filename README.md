@@ -39,7 +39,9 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** StringBuilder is faster than StringBuffer because StringBuilder is not thread-safe.
 
-**-** Prefer lambda expressions over anonymous classes.
+**-** Use lambda expressions instead of anonymous classes.
+
+**-** Use parallel streams with caution because they do not always achieve better as expected.
 
 **-** Use enumerated integers defined in a constant interface instead of constant String values for speed and memory benefits. Take performance advantage of comparing enumerated objects by identity comparison using "==" operator instead of equals() method.
 
@@ -60,6 +62,12 @@ Purpose : The purpose of this document is to provide a base check list for the c
 **-** Do not serialize unnecessary fields and mark them with transient.
 
 **-** Prefer java.lang.ref.Cleaner class instead of Finalizer to free memory.
+
+**-** Do not forget to release resources that were opened/used inside a try block.
+
+**-** Prefer try-with-resources in place of try-finally.
+
+**-** Implement a better and concrete "hashCode" method to achieve higher performance.
 
 
 ## Collections
@@ -103,6 +111,8 @@ Purpose : The purpose of this document is to provide a base check list for the c
 **-** Set corePoolSize and maximumPoolSize values for ThreadPoolExecutor when initializing it with reasonable numbers to get maximum performance benefit.
 
 **-** Prefer Atomic classes which utilize &quot;Compare and Swap&quot; instead of synchronized methods when appropriate.
+
+**-** Create or use Immutable thread-safe types in multi-threaded environments.
 
 **-** Use jconsole utility to learn about the total number of currently running threads of a Java process.
 
