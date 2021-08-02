@@ -112,6 +112,8 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 **-** Prefer Atomic classes which utilize &quot;Compare and Swap&quot; instead of synchronized methods when appropriate.
 
+**-** Prefer ConcurrentHashMap instead of Collections.synchronizedMap.
+
 **-** Create or use Immutable thread-safe types in multi-threaded environments.
 
 **-** Use jconsole utility to learn about the total number of currently running threads of a Java process.
@@ -143,6 +145,16 @@ _java_thread_list=0x00000180bae525e0, length=37, elements={ </br>
 **-** Prefer flat objects.
 
 **-** Select appropriate GC algorithm.
+
+**-** Monitor GC activity by using jstat utility coming inside JDK.
+
+**-** Use "jps -lv" from command line to get list of running Java processes.
+
+> jstat -gc -t 11008 1s </br>
+Timestamp      S0C    S1C     S0U    S1U      EC       EU        OC         OU       MC        MU     CCSC   CCSU        YGC   YGCT    FGC    FGCT    CGC    CGCT     GCT </br>
+26948,1        0,0   10240,0  0,0   10240,0 123904,0 112640,0  128000,0   96768,1   128616,0 116253,1 17560,0 14191,8     31    0,620   0      0,000   -      -      0,620 </br>
+26949,1        0,0   10240,0  0,0   10240,0 123904,0 112640,0  128000,0   96768,1   128616,0 116253,1 17560,0 14191,8     31    0,620   0      0,000   -      -      0,620 </br>
+26950,1        0,0   10240,0  0,0   10240,0 123904,0 112640,0  128000,0   96768,1   128616,0 116253,1 17560,0 14191,8     31    0,620   0      0,000   -      -      0,620 </br>
 
 ## Memory Space Efficiency
 
