@@ -157,6 +157,7 @@ Timestamp   S0C    S1C     S0U    S1U      EC       EU        OC         OU     
 26950,1     0,0   10240,0  0,0   10240,0 123904,0 112640,0  128000,0   96768,1   128616,0 116253,1 17560,0 14191,8     31    0,620   0      0,000   -      -      0,620 </br>
 
 **-** Collect GC activities in a separate log file by setting JVM argument : -Xlog:gc*:gc.log:time,level,tags </br>
+> </br>
 [2021-11-06T18:59:30.465+0300][info][gc,heap] Heap region size: 1M </br>
 [2021-11-06T18:59:30.487+0300][info][gc     ] Using G1 </br>
 [2021-11-06T18:59:30.487+0300][info][gc,heap,coops] Heap address: 0x0000000701a00000, size: 4070 MB, Compressed Oops mode: Zero based, Oop shift amount: 3 </br>
