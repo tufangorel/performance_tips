@@ -233,3 +233,5 @@ Heap dump file created </br>
 **-** [VisualVM](https://visualvm.github.io/)
 
 **-** [GCViewer](https://github.com/chewiebug/GCViewer)
+
+**-** [The Eclipse Memory Analyzer](https://www.eclipse.org/mat/)
