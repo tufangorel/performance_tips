@@ -158,16 +158,28 @@ Timestamp   S0C    S1C     S0U    S1U      EC       EU        OC         OU     
 26949,1     0,0   10240,0  0,0   10240,0 123904,0 112640,0  128000,0   96768,1   128616,0 116253,1 17560,0 14191,8     31    0,620   0      0,000   -      -      0,620 </br>
 26950,1     0,0   10240,0  0,0   10240,0 123904,0 112640,0  128000,0   96768,1   128616,0 116253,1 17560,0 14191,8     31    0,620   0      0,000   -      -      0,620 </br>
 
-**-** Collect GC activities in a separate log file by setting JVM argument : -Xlog:gc*:gc.log:time,level,tags </br>
->[2021-11-06T18:59:30.465+0300][info][gc,heap] Heap region size: 1M </br>
- [2021-11-06T18:59:30.487+0300][info][gc     ] Using G1 </br>
- [2021-11-06T18:59:30.487+0300][info][gc,heap,coops] Heap address: 0x0000000701a00000, size: 4070 MB, Compressed Oops mode: Zero based, Oop shift amount: 3 </br>
- [2021-11-06T18:59:31.177+0300][info][gc,start     ] GC(0) Pause Young (Normal) (G1 Evacuation Pause) </br>
- [2021-11-06T18:59:31.177+0300][info][gc,task      ] GC(0) Using 4 workers of 4 for evacuation </br>
- [2021-11-06T18:59:31.186+0300][info][gc,phases    ] GC(0)   Pre Evacuate Collection Set: 0.0ms </br>
- [2021-11-06T18:59:31.186+0300][info][gc,phases    ] GC(0)   Evacuate Collection Set: 8.0ms </br>
- [2021-11-06T18:59:31.186+0300][info][gc,phases    ] GC(0)   Post Evacuate Collection Set: 0.3ms </br>
- [2021-11-06T18:59:31.186+0300][info][gc,phases    ] GC(0)   Other: 0.5ms </br>
+**-** Collect GC activities in a separate log file by setting JVM argument : -Xlog:gc*:gc.log:time,pid,tags,uptime,level </br>
+>[2021-11-12T13:41:08.841+0300][2.220s][1980][info][gc,start     ] GC(3) Pause Young (Concurrent Start) (Metadata GC Threshold) </br>
+[2021-11-12T13:41:08.841+0300][2.220s][1980][info][gc,task      ] GC(3) Using 6 workers of 8 for evacuation </br>
+[2021-11-12T13:41:08.847+0300][2.226s][1980][info][gc,phases    ] GC(3)   Pre Evacuate Collection Set: 0.0ms </br>
+[2021-11-12T13:41:08.847+0300][2.226s][1980][info][gc,phases    ] GC(3)   Evacuate Collection Set: 5.2ms </br>
+[2021-11-12T13:41:08.847+0300][2.226s][1980][info][gc,phases    ] GC(3)   Post Evacuate Collection Set: 0.9ms </br>
+[2021-11-12T13:41:08.847+0300][2.226s][1980][info][gc,phases    ] GC(3)   Other: 0.2ms </br>
+[2021-11-12T13:41:08.847+0300][2.226s][1980][info][gc,heap      ] GC(3) Eden regions: 50->0(107) </br>
+[2021-11-12T13:41:08.847+0300][2.226s][1980][info][gc,heap      ] GC(3) Survivor regions: 3->5(15) </br>
+[2021-11-12T13:41:08.847+0300][2.226s][1980][info][gc,heap      ] GC(3) Old regions: 12->12 </br>
+[2021-11-12T13:41:08.847+0300][2.226s][1980][info][gc,heap      ] GC(3) Humongous regions: 4->4 </br>
+[2021-11-12T13:41:08.847+0300][2.226s][1980][info][gc,metaspace ] GC(3) Metaspace: 20598K->20598K(1069056K) </br>
+
+**-** Display current active GC activity log on application console by setting "-verbose:gc" flag. </br>
+> -verbose:gc </br>
+[2.904s][info][gc] GC(5) Pause Young (Normal) (G1 Evacuation Pause) 130M->23M(254M) 7.720ms </br>
+[3.125s][info][gc] GC(6) Pause Young (Normal) (G1 Evacuation Pause) 167M->23M(254M) 6.691ms </br>
+[3.872s][info][gc] GC(7) Pause Young (Concurrent Start) (Metadata GC Threshold) 138M->25M(305M) 12.619ms </br>
+[3.873s][info][gc] GC(8) Concurrent Cycle </br>
+[3.883s][info][gc] GC(8) Pause Remark 25M->25M(305M) 3.584ms </br>
+[3.885s][info][gc] GC(8) Pause Cleanup 25M->25M(305M) 0.089ms </br>
+
 
 ## Memory Space Efficiency
 
