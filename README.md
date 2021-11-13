@@ -247,3 +247,5 @@ Heap dump file created </br>
 **-** [GCViewer](https://github.com/chewiebug/GCViewer)
 
 **-** [The Eclipse Memory Analyzer](https://www.eclipse.org/mat/)
+
+**-** [jconsole](https://openjdk.java.net/tools/svc/jconsole/)
