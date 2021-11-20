@@ -24,6 +24,7 @@ Purpose : The purpose of this document is to provide a base check list for the c
 
 - [JVM Performance Analysis Monitoring Tools](#jvm-performance-analysis-monitoring-tools)
 
+- [Memory Leak Smells](#memory-leak-smells)
 
 ## Java SE
 
@@ -249,3 +250,27 @@ Heap dump file created </br>
 **-** [The Eclipse Memory Analyzer](https://www.eclipse.org/mat/)
 
 **-** [jconsole](https://openjdk.java.net/tools/svc/jconsole/)
+
+## Memory Leak Smells
+
+**-** java.lang.OutOfMemoryError is an indicator for memory leak.
+
+**-** Static declared collection types are not garbage collected. Implement-wrap remove method of static collection type to delete items added to the static collection. 
+
+**-** Static classes by themselves are not garbage collected.
+
+**-** Not closed database connection objects remain in the memory. Use a database connection pool to take advantage of reusability.
+
+**-** Open streams consume memory space. Use try-with-resources to manage lifecycle of a stream.
+
+**-** Attached listeners keep references to the parent object. Remove listeners when they are not needed.
+
+**-** Large result returning database select operations that are stored in collections can also cause a memory leak. Accomplish large selects in a batch style with pagination.
+
+**-** Missing proper equals() and hashCode() method for entities that are going to be stored in a HashMap or HashSet as key causes duplicate items stored in collection.
+
+**-** Finalizer methods do not release memory at expected level therefore avoid using finalizer methods.
+
+**-** Call ThreadLocal remove method after completing the required work.
+
+**-** Non-static inner classes cause a memory leak so instead use static inner class and make a WeakReference to the outer class.
